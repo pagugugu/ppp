@@ -1,0 +1,29 @@
+<?PHP include ('_top.html'); ?>
+      <div>
+
+<?PHP 
+    include ('_checkAdmin.php');  // 관리자만 접근 가능하도록 UserID 검사 
+?> 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>사용자 ID/PW 찾기</title>
+  <link rel="stylesheet" href="./_shop-style.css">
+</head>
+
+<table class='width700 border0 lineH25 center'> 
+<caption>*** 관리 메뉴 ***</caption>
+<tr><th>[ 회 원 관 리 ]</th><th>[ 상 품 관 리 ]</th><th>[ 주 문 관 리 ]</th></tr>
+<tr><td><a href='admin-showMemberList.php'>회원 목록 조회</a></td>
+	<td><a href='p-inputForm.html'>신규 판매상품 등록</a></td>
+    <td><a href='admin-showOrderList.php'>주문 내역 조회</a></td>
+</tr>	  
+<tr><td></td>
+	<td><a href='p-adminlist.php'>판매상품 수정/삭제</a></td>
+</tr> 	  
+</table>
+
+</div>
+<?PHP include ('_bottom.html'); ?>

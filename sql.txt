@@ -1,0 +1,91 @@
+create table product (
+   class int(2),
+   code varchar(20),
+   name varchar(80) binary,
+   artist varchar(20),
+   company varchar(20),
+   sdate varchar(10),
+   content text, 
+   link varchar(100),
+   price1 int(8),
+   price2 int(8),
+   deliprice int(8),
+   userfile varchar(50) binary,	
+   hit int(5),
+   primary key(code) );
+
+desc product;
+
+create table members (
+   uid varchar(12),
+   upass varchar(15),
+   uname varchar(10),
+   mphone varchar(15),
+   email varchar(30),
+   zipcode varchar(7),
+   addr1 varchar(50),
+   addr2 varchar(50),
+   approved int(1) default 0,
+   primary key(uid) );
+ 
+desc members;
+
+create table zipcode (
+   zipcode varchar(7),
+   sido varchar(15),
+   gugun varchar(20),
+   dong varchar(52),
+   bunji varchar(17),
+   seq int(5),
+   primary key(seq) );
+ 
+desc zipcode;
+
+create table shoppingbag (
+   id varchar(20),
+   session tinytext,
+   pcode varchar(20),
+   quantity int(3)
+);
+  
+desc shoppingbag;
+
+create table orderlist (
+   id varchar(20),
+   session tinytext,
+   pcode varchar(20),
+   quantity int(3),
+   ordernum varchar(35)
+);
+  
+desc orderlist;
+
+create table receivers (
+   id varchar(20),
+   session tinytext,
+   receiver varchar(20),
+   phone varchar(30),
+   address varchar(100),
+   message text,
+   buydate varchar(30),
+   sender varchar(20),
+   ordernum varchar(35),
+   status int(1)
+);
+ 
+desc receivers;
+
+create table customer (
+   id int(4) not null,
+   writer varchar(20) not null,
+   email varchar(40),
+   passwd varchar(20),
+   category varchar(30),
+   topic varchar(50) not null,
+   content text not null, 
+   hit int(3) not null,
+   wdate varchar(20) not null,
+   space int(2),
+   primary key(id) );
+
+desc customer;

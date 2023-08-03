@@ -1,0 +1,143 @@
+<?PHP include ('_top.html'); ?>
+
+<head>
+
+<script   language='Javascript'> 
+ function id_check() {
+  var id = document.comma.uid.value;
+  if (id.length < 5) window.alert('ID는 5글자 이상 입력해주세요');
+  else    window.open('m-checkDupId.php?id=' + id, 'IDCHECK', 'width=450, height=200, scrollbars=yes');
+ } 
+ 
+ function go_zip() {
+  window.open('zip-findForm.html','ZIP','width=470, height=180, scrollbars=yes');
+ }
+</script>
+
+
+<style>
+	body {
+		margin-bottom: 40px;
+		margin-right: 315px;
+		margin-left: 315px;
+		background-color: #ffffff;
+	}
+
+.form_style {
+	margin-left: 400px;
+	margin-right: 400px;
+}
+h2 {
+	text-align: center;
+	margin-top: 90px;
+	margin-bottom: 50px;
+	}
+
+.joinForm {
+  position:absolute;
+  width:400px;
+  height:400px;
+  padding: 30px, 20px;
+  background-color:#FFFFFF;
+  text-align:center;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 15px;
+  
+}
+
+.textForm {
+  border-bottom: 2px solid #adadad;
+  margin: 30px;
+  padding: 10px 10px;
+  position: relative;
+}
+
+
+.input_form {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+  z-index: 20;
+}
+.btn {
+  position:relative;
+  left:50%;
+  transform: translateX(-50%);
+  margin-bottom: 90px;
+  margin-top: 15px;
+  width:50%;
+  height:40px;
+  background: black;
+  color:white;
+  font-weight: bold;
+  border:none;
+  cursor:pointer;
+  display:inline;
+}
+.dupID {
+	position: absolute;
+	top: 13px;
+	left: 0;
+	margin: 0;
+	transform: translateX(270%);
+}
+.zip {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	margin: 0;
+	transform: translateX(220%);
+
+}
+  </style>
+  </head>
+
+<body>
+<form action='m-insertRecord.php' method='post' name='comma' class="form_style">
+
+ <h2>회원가입</h2>
+<div class="textForm">
+		<p class="dupID">[<a href='javascript:id_check()'> ID중복검사 </a>]</p>
+        <input type="text" name="uid" class="input_form" placeholder="아이디">
+		</div>
+		
+		<div class="textForm">
+		<input type="password" name="upass1"  class="input_form" placeholder="비밀번호">
+      </div>
+	  <div class="textForm">
+        <input type="password" name="upass2"  class="input_form" placeholder="비밀번호 확인">
+      </div>
+	  <div class="textForm">
+        <input type="text" name="uname"  class="input_form" placeholder="이름">
+      </div>
+	  <div class="textForm">
+        <input type="text" name="mphone"  class="input_form" placeholder="휴대전화">
+      </div>
+	  <div class="textForm">
+		
+        <input type="text" name="email"  class="input_form" placeholder="이메일">
+      </div>
+	  
+	  <div class="textForm">
+		<p class="zip">[<a href='javascript:go_zip()'> 우편번호검색 </a>]</p>
+        <input type="text" name="zip"  class="input_form" placeholder="우편번호" readonly>
+		<br>
+		</div>
+		<div class="textForm">
+		<input type='text' name='addr1' class="input_form" placeholder="주소" readonly><br>
+		</div>
+		<div class="textForm">
+	     <input type='text' name='addr2' class="input_form" placeholder="세부주소"></td>
+      </div>
+
+<input type="submit" class="btn" value="J O I N"/>
+
+</form>
+
+<?PHP include ('_bottomt.html'); ?>

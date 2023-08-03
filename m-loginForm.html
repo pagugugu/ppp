@@ -1,0 +1,63 @@
+<?PHP include ('_top.html'); ?>
+
+<head>
+  <style>
+	body {
+		margin-bottom: 40px;
+		margin-right: 315px;
+		margin-left: 315px;
+		background-color: #ffffff;
+	}
+
+		h2 {
+			text-align: center;
+			margin-top: 180px;
+			}
+
+        #login_box {
+            margin: auto;
+            width: 300px;
+            background-color: #f2ebeb;
+            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+			margin-top: 20px;
+			margin-bottom: 200px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: none;
+			margin-bottom: 10px;
+			font-size: medium;
+        }
+
+        #btn {
+            background-color: #000000;
+            margin-bottom: 30px;
+            color: white;
+        }
+		 a {
+            text-decoration: none;
+            color: #323232;
+            font-size: 15px;
+        }
+  </style>
+  </head>
+
+ <body>
+<h2>로그인</h2>
+<div id="login_box">
+        <form method="post" action="m-login.php" onsubmit="if(!this.uid.value || !this.upass.value) return false;">
+		<input type="text" id="uid" name="uid" placeholder="아이디" required>
+		<input type="password" id="upass" name="upass" placeholder="비밀번호" required>
+
+		<input type="submit"  id="btn" value="로그인">
+        </form>
+		<a href='m-joinConfirm.html' target="display_area">회원가입</a> | <a href='m-findIdPw.html' target="display_area">Id/Pw 찾기</div>
+ </body>
+
+ <?PHP include ('_bottomt.html'); ?>

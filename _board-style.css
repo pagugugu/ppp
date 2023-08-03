@@ -1,0 +1,37 @@
+/* 게시판 관련 스타일  _board-style.css
+    board-inputForm.php 
+	board-modifyForm.php
+    board-replyForm.php
+    board-viewContent.php
+ 
+	board-inputPasswd.php
+	board-show.php
+	board-searchNShow.php
+
+   <link rel="stylesheet" href="./_board-style.css">
+*/
+   
+table        { width: 700px;    border:0; }  
+caption      { font-size: 30px; font-weight: bold; margin: 20px 0 20px 0; }
+th, td       { line-height: 30px; }
+td           { text-align: center; } 
+
+.top         { text-align: right; }   /* 메인 테이블 윗 부분 링크 */ 
+.bottom      { border: 0; margin-top: 20px; text-align: center; } /* 아래에 버튼과 링크 부분 */
+
+/* inputF 클래스 : inputForm, modifyForm, replyForm  */
+.inputF th   { text-align: right; width: 80px; } 
+.inputF td   { text-align: left;  }   
+
+/* board 클래스 : 게시글 목록을 보여주는 show, searchResult */
+.board    { border: 1px solid gray; border-collapse: collapse; } 
+.board th { background-color: #000080; color: white; } 
+
+.left  { text-align: left;  }
+.right { text-align: right; }
+
+.blue  { color: blue; }
+
+a:link    { color: blue; text-decoration: none; }
+a:visited { color: blue; text-decoration: none; }
+a:hover   { color: red;  text-decoration: underline; }

@@ -1,0 +1,116 @@
+/* 쇼핑몰 관련 스타일 정의 _shop-style.css
+   <link rel="stylesheet" href="./_shop-style.css">
+*/
+/* main 화면 스타일  */
+body { font-size: 0.8em; }
+
+.wrap  { width: 900px;  min-height:800px; 
+         margin:0; margin-right: auto; margin-left: auto;
+}
+
+header, nav  { width: 900px;  }
+nav table    { margin: -5px 0; width: 900px; border: 0; }
+
+aside   { width: 125px;  float: left; padding: 3px; text-align: center;  }
+article { width: 750px;  min-height: 600px; 
+           margin:5px 0; float: right; 
+		   text-align: center;
+   	    }
+
+img   { border: none; }
+.wrap { text-align: left;  background-color: white; }
+
+.clear { clear: both; }
+hr     { clear: both; }
+
+nav table th  { padding: 5px; }
+
+/* 공통 스타일 */
+caption  { font-size: 20px; font-weight: bold;  margin: 15px 0 15px 0; } /* 표의 제목 */
+.left    { text-align: left;   }
+.right   { text-align: right;  }
+.center  { text-align: center; }
+.top     { line-height: 25px; border: 0px; }   
+.bottom  { text-align: center; line-height: 60px; vertical-align: bottom; border: 0px; }   
+
+a:link    { color: blue; text-decoration: none; }
+a:visited { color: blue; text-decoration: none; }
+a:hover   { color: red;  text-decoration: underline; }
+
+.red     { color: red;  } 
+.blue    { color: blue; } 
+strong   { color: purple; } 
+.bgBlue  { background-color: #000080; color: white;  } 
+.bgIvory { background-color: #ffffef; } 
+.bgPink  { background-color: #ffefff; } 
+
+.price1 { text-decoration: line-through; }  /* 할인 전 가격 */
+
+table { border-collapse: collapse; }
+
+.width500 { width: 500px; }
+.width700 { width: 700px; }
+.width800 { width: 800px; }
+.width900 { width: 900px; }
+
+.border0 { border: 0; }
+.border0 table, tr, th { border: 0; }
+.border1 { border: 1px solid gray;  }
+.border1 th, .border1 td { border: 1px solid gray; }
+
+.lineH25 { line-height: 25px; }
+
+/* inputF 클래스 : p-inputForm, p-modifyForm  */
+.inputF table   { width: 700px; border: 0; } 
+.inputF th      { text-align: center;  width: 80px; } 
+.inputF td      { text-align: left; } 
+
+/* pAdminList 클래스 : p-adminList.php에서 상품 목록을 표로 보여줌 */
+.pAdminList th  { background-color:#CFD0ED; }
+.pAdminList img { width: 30px; height: 40px;  }
+
+/* pInfo 클래스 : p-Info.php 에서 각 상품의 정보를 보여줌 */
+.pInfo table   { width: 650px; border: 0px; }  
+.pInfo ul      { list-style: none; } 
+.pInfo img     { width: 150px; border: 1px; }
+.pInfo td      { text-align: left; } 
+
+/* pList 클래스 : p-list.php에서 상품 목록을 보여줌 (사용자용) */
+.pList table   { width: 700px; border: 0;  }   
+.pList td      { width: 135px; text-align: center; font-size: 12px; vertical-align: top; line-height: 20px;}   
+.pList img     { width: 90px; height: 120px; border: 0; text-align: center;}
+.pList a:link  { text-decoration: underline; }
+.pList .hr     { width: 700px;  height: 55px; } 
+
+/* members 클래스 : m-joinConfirm.html, m-joinForm.html, se-buy.php(배송지 주소 부분) */
+.members table    { width: 700px; border: 0; line-height: 25px; 
+	border-collapse: collapse; text-align: left;  border: 1px solid white; }  
+.members th       { text-align: right; }
+.members .button  { border: 1px inset black; }  
+
+/* myInfo 클래스 */
+.myInfo th   { border: 1px solid gray; text-align: center; background-color: #000080; color: white; }
+.myInfo td   { border: 1px solid gray; }   
+.myInfo .top { line-height: 25px; border: 0px; }   
+
+/* zip 클래스 : 우편번호 검색관련 클래스 zip-findForm.html. zip-findAddress.php */
+.zip table { border:0;  width: 420px; height:130px; font-size: 12px;  text-align: left;  border-collapse: collapse; } 
+
+/* checkId 클래스: 아이디 중복 검사 창  m-checkDupId.php */
+.checkId     { text-align: center; font-size: small;  width: 420px;  }
+.checkId div { border: 3px double gray;  margin: 20px;  padding: 10px; }
+
+/* findIdPw 클래스 :  ID, PW 검색 관련  m-findidpw.html  m-findid.php m-findid.php  */
+.findIdPw table    { width: 400px; border: 0;  text-align: center; }
+.findIdPw table th { text-align: right; }
+
+/* sbList 클래스 : 쇼핑백 목록  sb-showBag.php */
+.sbList        { width: 700px;  }         
+.sbList td     { text-align: center; }
+.sbList img    { width: 40px; border: 0; text-align: center; }
+
+/* receiver 클래스 se-buy에서 배송 주소 */
+.reciever td   { text-align: left; }
+
+/* admin 아이디 : admin.html */
+#admin { width: 900px; table-layout: fixed; }

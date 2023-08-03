@@ -1,0 +1,114 @@
+<?PHP include ('_top.html'); ?>
+      <div>
+
+<?PHP 
+    include ('_checkAdmin.php');  // 19장. 관리자만 접근 가능하도록 UserID 검사 
+?> 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>관리자용 상품 등록</title>
+  <link rel="stylesheet" href="./_shop-style.css">
+  <style>
+  	body {
+		margin-bottom: 40px;
+		margin-right: 315px;
+		margin-left: 315px;
+		background-color: #ffffff;
+	}
+
+  	caption {
+		margin-top: 90px;
+		margin-bottom: 30px;
+		font-size: 24px;
+        font-weight: bold;
+		}
+		table {
+                border-collapse: collapse;
+                width: 60%;
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+
+            th {
+                background-color: #f2f2f2;
+                text-align: right;
+                padding: 10px;
+            }
+
+            td {
+                padding: 10px;
+            }
+
+            input[type="text"],
+            textarea {
+                width: 80%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            select {
+                width: 80%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                appearance: none;
+                background-size: 15px;
+            }
+
+            .bottom {
+                text-align: center;
+				left: 40%;
+				bottom: 0;
+				transform: translateX(40%);	
+            }
+
+            .bottom input[type="submit"] {
+                background-color: #323232;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+				margin-top: 50px;
+            }
+
+            .bottom input[type="submit"]:hover {
+                background-color: black;
+            }
+  </style>
+
+</head>
+
+<body class='inputF'>
+<table> 
+ <caption>상품 등록</caption>
+ <form method='post' action='p-insertRecord.php' enctype='multipart/form-data'>
+  <tr><th>상품분류</th><td><select name='class'>
+ 	<option value='1'>POP</option>
+   	<option value='2'>K-POP</option>
+	<option value='3'>J-POP</option>
+  </select></td></tr>
+  <tr><th>음반코드</th><td><input type='text' name='code' ></td></tr>
+  <tr><th>음반이름</th><td><input type='text' name='name' ></td></tr>
+  <tr><th>아티스트</th><td><input type='text' name='artist' ></td></tr>
+  <tr><th>음반회사</th><td><input type='text' name='company'></td></tr>
+  <tr><th>판매날짜</th><td><input type='text' name='sdate' placeholder="YYYY-MM-DD"></td></tr>
+  <tr><th>상품설명</th><td><textarea name='content' rows='15' cols='75'></textarea></td></tr>
+  <tr><th>상품링크</th><td><input type='text' name='link' ></td></tr>
+  <tr><th>정상가격</th><td><input type='text' name='price1'>원</td></tr>
+  <tr><th>할인가격</th><td><input type='text' name='price2' >원</td></tr>
+  <tr><th>상품사진</th><td><input type='file' size='30' name='userfile'></td></tr>
+  <tr><td class='bottom' colspan='5'><input type='submit' value='등록하기'></td></tr>
+ </form>
+</table>
+</body>
+</html>
+
+</div>
+<?PHP include ('_bottomt.html'); ?>

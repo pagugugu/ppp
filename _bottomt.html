@@ -1,0 +1,205 @@
+<head>
+
+    <title>Footer</title>
+
+<style>
+
+footer {
+    background-color: #fcfafa;
+    padding-top: 10px;
+   padding-left: 30px;
+   padding-right: 30px;
+   width: 1080px;
+   height: 430px;
+   margin-left: 70px;
+   margin-right: 0px;
+   overflow-x: hidden;
+}
+.footer-content {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer::before,
+footer::after {
+    content: "";
+    flex-grow: 1;
+}
+
+/* Logo */
+.logos {
+   position: relative;
+   top: 0px;
+   left: 0px; 
+    margin-bottom: 20px;
+}
+.logos img {
+   width: 130px;
+    height: 130px;
+}
+
+/* Categories */
+footer h6 {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+   font-weight: bold;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer ul li a {
+    color: #b7b7b7;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #000000;
+}
+
+/* Social Media Icons */
+footer img {
+    margin-right: 10px;
+}
+
+/* Copyright */
+.info {
+    color: #b7b7b7;
+    font-size: 15px;
+   width: 216px;
+   height: 155px;
+}
+
+footer a {
+    color: #f0e68c;
+    text-decoration: none;
+   font-weight: bold;
+   }
+
+footer a:hover {
+    color: #000;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.first {
+   margin-left: 30px;
+   clear: both;
+   }
+.category {
+   float: left;
+   margin-right: 30px;
+   margin-bottom: 30px;
+   top: -280px;
+   left: 450px;
+   position: relative;
+}
+.SNS {
+   text-align: right;
+   position: relative;
+   top: -90px;
+   right: 10px;
+}
+.copyright {
+   text-align: center;
+   font-size: 15px; 
+   position: relative;
+   top: -50px;
+   color: #b7b7b7;
+}
+.links {
+   margin-bottom: 10px;
+   top: -280px;
+   left: 600px;
+   position: relative;
+   width: 300px;
+   }
+   .blank {
+      height: 0px;
+   }
+   .blank2 {
+      height: 10px;
+      }
+   hr {
+      position: relative;
+      top: -70px;
+      color: #b7b7b7;
+      }
+
+</style>
+
+</head>
+
+<footer>
+    <div classs="footer-fontent>
+        <div class="first">
+            <div>
+                <div class="logos">
+                    <a href="index.html"><img src="./image/logo.png" alt=""></a>
+                </div>
+                <p class="info"}>POP POP POP Record | 전라남도 여수시 대학로 50 | 대표이사: 웹서버 1조 | 이메일: poppoppop@pop.co.kr | 사업자등록번호 : 2023-06-15 </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="category">
+                    <h6>Categories</h6>
+                    <ul>
+                        <li><a href="p-list.php?class=1">POP</a></li>
+                        <li><a href="p-list.php?class=2">K-POP</a></li>
+                        <li><a href="p-list.php?class=3">J-POP</a></li>
+                        <li><a href="board-show.php?board=customer">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blank">
+                <div class="links">
+                    <h6>Links</h6>
+                    <ul>
+                        <li><a href="terms.html">이용약관</a></li>
+                        <li><a href="personal.html">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="SNS">
+                    <a href="http://instagram.com" target="_blank">
+                       <img src="./image/instagram.png" height="32" alt="Instagram">
+                    </a>
+                    <a href="http://youtube.com" target="_blank">
+                       <img src="./image/youtube.png" height="32" alt="Youtube">
+                    </a>
+                    <a href="http://twitter.com" target="_blank">
+                       <img src="./image/twitter.png" height="32" alt="Twitter">
+                    </a>
+                    <a href="http://facebook.com" target="_blank">
+                       <img src="./image/facebook.png" height="32" alt="Facebook">
+                    </a>
+                    <a href="http://kakaotalk.com" target="_blank">
+                       <img src="./image/kakaotalk.png" height="32" alt="Kakaotalk">
+                    </a>
+                </div>
+            </div>
+         <hr>
+
+            <div class="blank">
+                <div class="blank2">
+                    <p class="copyright">Copyright &copy; 2023 All Rights Reserved by
+                        <a href="index.html"><strong>POP POP POP♡</strong></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>

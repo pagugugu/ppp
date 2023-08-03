@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>POP POP POP</title>
+
+<style>
+	body {
+		margin-bottom: 40px;
+	}
+	.cart{
+		position: relative;
+		top: -20px;
+		left: 845px;
+		width: 34px;
+		height: 100%;
+	}
+	.cart_login {
+		position: relative;
+		top: -20px;
+		left: 845px;
+		width: 34px;
+		height: 100%;
+		visibility: hidden;
+	}
+	.mypage{
+		position: relative;
+		top: -20px;
+		left: 860px;
+		
+	}
+	.mypage_login {
+		position: relative;
+		top: -20px;
+		left: 860px;
+		visibility: hidden;
+	}
+	.login{
+		position: relative;
+		top: -20px;
+		left: 870px;
+		
+	}
+
+	.logo{
+		position: relative;
+		top: 66px;
+		left: -90px;
+		width: 81px;
+		height: 100%;
+	}
+	.pop {
+		position: relative;
+		top: 44px;
+		left: -31px;
+	}
+	.kpop {
+		position: relative;
+		top: 44px;
+		left: 40px;
+	}
+	.jpop {
+		position: relative;
+		top: 44px;
+		left: 109px;
+	}
+	.community {
+		position: relative;
+		top: 44px;
+		left: 188px;
+	}
+</style>
+ </head>
+ <body>
+
+
+
+<?php
+include ('_getCookieIDnName.php');  
+  if (!$UserID) { 
+    ?>
+	<img src="./image/cart.png" class="cart_login"></a>
+	<img src="./image/mypage.png" class="mypage_login"></a>
+	 <a href="m-loginForm.html"><img src="./image/login.png" class="login" onMouseOver="this.src='image/loginb.png'" onMouseOut="this.src='image/login.png'"></a>
+
+	     <?php
+  } else {
+    ?>
+	<a href="sb-showbag.php"><img src="./image/cart.png" class="cart"  alt="Shopping Cart"></a>
+	<a href="m-mypage.php"><img src="./image/mypage.png" class="mypage" onMouseOver="this.src='image/mypageb.png'" onMouseOut="this.src='image/mypage.png'" ></a>
+	<a href="m-logout.php" "><img src="./image/logout.png" class="login" onMouseOver="this.src='image/logoutb.png'" onMouseOut="this.src='image/logout.png'"></a>
+	    <?php
+  }
+  ?>
+
+  <a href="index.html"><img src="./image/logo.png" class="logo"></a>
+
+ <a href='p-list.php?class=1'><img src="./image/pop.png" class="pop" onMouseOver="this.src='image/poph.png'"   onMouseOut="this.src='image/pop.png'" ></a>
+ <a href='p-list.php?class=2'><img src="./image/kpop.png" class="kpop" onMouseOver="this.src='image/kpoph.png'"   onMouseOut="this.src='image/kpop.png'" ></a>
+ <a href='p-list.php?class=3'><img src="./image/jpop.png" class="jpop" onMouseOver="this.src='image/jpoph.png'"   onMouseOut="this.src='image/jpop.png'" ></a>
+ <a href='board-show.php?board=customer'><img src="./image/community.png" class="community"
+ onMouseOver="this.src='image/communityh.png'" onMouseOut="this.src='image/community.png'"></a>
+
+ </body>
+</html

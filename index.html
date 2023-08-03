@@ -1,0 +1,68 @@
+<?PHP include ('_top.html'); ?>
+
+<head>
+<style>
+body {
+		margin-bottom: 40px;
+		margin-right: 315px;
+		margin-left: 315px;
+	}
+   .searchS {
+      display: flex;
+      justify-content: center;
+	  margin: 0 auto;
+	  margin-top: 79px;
+	  margin-bottom: 30px;
+    }
+
+	.search {
+	position: relative;
+	width: 450px;
+	}
+
+	.search_box {
+  background-color: white; /* 폼 내부 배경색 */
+  border: none; /* 테두리 제거 */
+  padding: 10px 12px; /* 내부 여백 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* 외부 그림자 */
+  width: 100%; /* 폼 너비 */
+}
+
+ .search_button {
+	  background-color: white;
+      background-image: url('./image/search.png');
+      background-size: cover;
+      width: 17px;
+	  top: 8px;
+	  right: 9px;
+	  margin: 0;
+      border: none;
+      cursor: pointer;
+	  position: absolute;
+    }
+
+.banner {
+margin-left: 64px;
+margin-right: 64px;
+margin-bottom: 15px;
+margin-top: 15px;
+}
+</style>
+</head>
+
+<div class="searchS">
+<div class="search">
+<form method='post' action='main-searchNShow.php' target="display_area">
+<input type='text' name='key' size='13' class="search_box">
+<input type='submit' value='' class="search_button">
+</div>
+</div>
+
+<div>
+<img src="./image/banner.png" width="1138px" height="560px" class="banner">
+<img src="./image/class0.png"  class="banner">
+</div>
+<?PHP include ('p-mainlist.php'); ?>
+
+<?PHP include ('_bottomt.html'); ?>
+
